@@ -4,6 +4,7 @@ Dsb::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'requests#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -13,6 +14,9 @@ Dsb::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :requests do
+    post 'check', on: :collection
+  end
 
   # Example resource route with options:
   #   resources :products do
