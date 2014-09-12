@@ -20,8 +20,10 @@ join_to_play_success = (data) ->
   return false if !data.request
   $.cookie "request_id", data.request.id
   if data.request.satisfied
-    go_to_play()
+    $.cookie "player_id", 2
+    go_to_play(data.game)
   else
+    $.cookie "player_id", 1
     wait_start()
 
 wait_start = ->
@@ -39,8 +41,8 @@ wait_start = ->
 wait_to_play_success = (data, wait_interval) ->
   if data.request.satisfied
     clearInterval wait_interval
-    go_to_play()
+    go_to_play(data.game)
 
-go_to_play = ->
+go_to_play = (game) ->
   show 'button'
-  console.log "GO TO PLAY PAGE!"
+  location.href = "/games/" + game.id

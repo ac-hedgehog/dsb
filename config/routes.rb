@@ -18,6 +18,7 @@ Dsb::Application.routes.draw do
     post 'check', on: :collection
   end
 
+  resources :games
   # Example resource route with options:
   #   resources :products do
   #     member do
