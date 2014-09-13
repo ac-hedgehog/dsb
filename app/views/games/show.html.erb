@@ -1,1 +1,25 @@
-Вы игрок №<%= cookies[:player_id] %> в игре №<%= @game.id %>!
+<div>Вы игрок №<%= cookies[:player_id] %> в игре №<%= @game.id %>!</div>
+<br />
+
+<table id="placement-field">
+<% (0..11).each do |i| %>
+  <tr>
+    <% (0..11).each do |j| %>
+      <% if i == 0 || i == 11 %>
+        <% symbols = [''] + ('A'..'J').to_a + [''] %>
+        <td class="border">
+          <%= symbols[j] %>
+        </td>
+      <% elsif j == 0 || j == 11 %>
+        <% numbers = [''] + (1..10).to_a + [''] %>
+        <td class="border">
+          <%= numbers[i] %>
+        </td>
+      <% else %>
+        <td id='cell-<%= "#{j - 1}-#{i - 1}" %>' class="sea"></td>
+      <% end %>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+<br />

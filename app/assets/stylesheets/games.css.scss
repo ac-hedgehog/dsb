@@ -1,3 +1,84 @@
-// Place all the styles related to the Games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#placement-field td {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+#placement-field td.border {
+  background-color: white;
+  text-align: center;
+}
+#placement-field td.sea {
+  background-color: #0000ff;
+}
+#placement-field td[data-freely=true] {
+  box-shadow: inset 0 0 35px rgba(0, 255, 0, 0.6);
+}
+#placement-field td[data-freely=false] {
+  box-shadow: inset 0 0 35px rgba(255, 0, 0, 0.6);
+}
+
+#placement-field td.normal-ship {
+  background-color: #ff8800;
+}
+#placement-field td.shadow-ship {
+  background-color: #aaaaaa;
+}
+#placement-field td.damaged-ship {
+  background-color: #ff0000;
+}
+#placement-field td.sunken-ship {
+  background-color: #000000;
+}
+
+#placement-field td.normal-ship-up {
+  background-image: url('images/normal-ship-up.png');
+}
+#placement-field td.shadow-ship-up {
+  background-image: url('images/shadow-ship-up.png');
+}
+#placement-field td.damaged-ship-up {
+  background-image: url('images/damaged-ship-up.png');
+}
+#placement-field td.sunken-ship-up {
+  background-image: url('images/sunken-ship-up.png');
+}
+
+#placement-field td.normal-ship-down {
+  background-image: url('images/normal-ship-down.png');
+}
+#placement-field td.shadow-ship-down {
+  background-image: url('images/shadow-ship-down.png');
+}
+#placement-field td.damaged-ship-down {
+  background-image: url('images/damaged-ship-down.png');
+}
+#placement-field td.sunken-ship-down {
+  background-image: url('images/sunken-ship-down.png');
+}
+
+#placement-field td.normal-ship-left {
+  background-image: url('images/normal-ship-left.png');
+}
+#placement-field td.shadow-ship-left {
+  background-image: url('images/shadow-ship-left.png');
+}
+#placement-field td.damaged-ship-left {
+  background-image: url('images/damaged-ship-left.png');
+}
+#placement-field td.sunken-ship-left {
+  background-image: url('images/sunken-ship-left.png');
+}
+
+#placement-field td.normal-ship-right {
+  background-image: url('images/normal-ship-right.png');
+}
+#placement-field td.shadow-ship-right {
+  background-image: url('images/shadow-ship-right.png');
+}
+#placement-field td.damaged-ship-right {
+  background-image: url('images/damaged-ship-right.png');
+}
+#placement-field td.sunken-ship-right {
+  background-image: url('images/sunken-ship-right.png');
+}
