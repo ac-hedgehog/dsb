@@ -195,7 +195,7 @@ function Ship (field, size, direction, head, condition) {
     
     for (var i = 0; i < 10; i++) {
       for (var j = 0; j < 10; j++) {
-        $("td#cell-" + i + "-" + j).get(0).dataset.freely = true;
+        $("td#cell-" + i + "-" + j)[0].dataset.freely = true;
       }
     }
     
@@ -203,7 +203,7 @@ function Ship (field, size, direction, head, condition) {
       if (ship != currentShip) {
         busyZone = ship.getBusyZone(currentShip.direction);
         busyZone.forEach(function (buzyCell, i) {
-          $("td#cell-" + buzyCell.join("-")).get(0).dataset.freely = false
+          $("td#cell-" + buzyCell.join("-"))[0].dataset.freely = false
         });
       }
     });
@@ -215,7 +215,7 @@ function Ship (field, size, direction, head, condition) {
     
     this.segments.forEach(function (segment, i) {
       cell = segment.position;
-      if ($("td#cell-" + cell[0] + "-" + cell[1]).get(0).dataset.freely == "false") {
+      if ($("td#cell-" + cell[0] + "-" + cell[1])[0].dataset.freely == "false") {
         shipInFreelyZone = false;
       }
     });
@@ -274,7 +274,7 @@ function Field (type) {
     $('#' + this.type + '-field').find('tr').each(function (j, row) {
       $(row).find('td').each(function (i, cell) {
         if ($(cell).attr('class') !== 'border') {
-          $(cell).get(0).dataset.freely = null;
+          $(cell)[0].dataset.freely = null;
         }
       });
     });
